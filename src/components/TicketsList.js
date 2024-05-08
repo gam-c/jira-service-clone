@@ -69,8 +69,8 @@ const TicketsList = () => {
               label="Tipo"
             >
               <MenuItem value="">Todos</MenuItem>
-              <MenuItem value="Técnico">Técnico</MenuItem>
-              <MenuItem value="Funcional">Funcional</MenuItem>
+              <MenuItem value="tecnico">Técnico</MenuItem>
+              <MenuItem value="funcional">Funcional</MenuItem>
             </Select>
           </FormControl>
         </Grid>
