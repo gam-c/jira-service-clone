@@ -62,7 +62,7 @@ const TicketsList = () => {
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
           <FormControl fullWidth variant="standard">
-            <InputLabel>Tipo</InputLabel>
+            <InputLabel>Filtrar por Tipo</InputLabel>
             <Select
               value={filterType}
               onChange={e => setFilterType(e.target.value)}
@@ -76,7 +76,7 @@ const TicketsList = () => {
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
           <FormControl fullWidth variant="standard">
-            <InputLabel>Prioridad</InputLabel>
+            <InputLabel>Filtrar por Prioridad</InputLabel>
             <Select
               value={filterPriority}
               onChange={e => setFilterPriority(e.target.value)}
@@ -91,7 +91,7 @@ const TicketsList = () => {
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
           <FormControl fullWidth variant="standard">
-            <InputLabel>Estado</InputLabel>
+            <InputLabel>Filtrar por Estado</InputLabel>
             <Select
               value={filterStatus}
               onChange={e => setFilterStatus(e.target.value)}
