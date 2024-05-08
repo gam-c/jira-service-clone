@@ -27,9 +27,9 @@ const EditTicketForm = ({ ticket, onClose }) => {
           value={priority}
           onChange={(e) => setPriority(e.target.value)}
         >
-          <MenuItem value="alta">Alta</MenuItem>
-          <MenuItem value="media">Media</MenuItem>
-          <MenuItem value="baja">Baja</MenuItem>
+          <MenuItem value="Alta">Alta</MenuItem>
+          <MenuItem value="Media">Media</MenuItem>
+          <MenuItem value="Baja">Baja</MenuItem>
         </TextField>
       </Grid>
       <Grid item xs={6}>
@@ -41,8 +41,8 @@ const EditTicketForm = ({ ticket, onClose }) => {
           onChange={(e) => setStatus(e.target.value)}
           disabled={ticket.status === 'cerrado'}
         >
-          <MenuItem value="abierto">Abierto</MenuItem>
-          <MenuItem value="cerrado">Cerrado</MenuItem>
+          <MenuItem value="Abierto">Abierto</MenuItem>
+          <MenuItem value="Cerrado">Cerrado</MenuItem>
         </TextField>
       </Grid>
       <Grid item xs={12}>

@@ -21,7 +21,7 @@ const AddTicketForm = () => {
       description,
       type,
       priority,
-      status: 'abierto',
+      status: 'Abierto',
       date: new Date().toISOString()
     }));
     setTitle('');
@@ -58,8 +58,8 @@ const AddTicketForm = () => {
           value={type}
           onChange={(e) => setType(e.target.value)}
         >
-          <MenuItem value="tecnico">Técnico</MenuItem>
-          <MenuItem value="funcional">Funcional</MenuItem>
+          <MenuItem value="Técnico">Técnico</MenuItem>
+          <MenuItem value="Funcional">Funcional</MenuItem>
         </TextField>
       </Grid>
       <Grid item xs={6}>
@@ -70,9 +70,9 @@ const AddTicketForm = () => {
           value={priority}
           onChange={(e) => setPriority(e.target.value)}
         >
-          <MenuItem value="alta">Alta</MenuItem>
-          <MenuItem value="media">Media</MenuItem>
-          <MenuItem value="baja">Baja</MenuItem>
+          <MenuItem value="Alta">Alta</MenuItem>
+          <MenuItem value="Media">Media</MenuItem>
+          <MenuItem value="Baja">Baja</MenuItem>
         </TextField>
       </Grid>
       <Grid item xs={12}>

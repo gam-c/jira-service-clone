@@ -10,11 +10,11 @@ const formatDate = (dateString) => {
 
 const getBackgroundColor = (priority) => {
   switch (priority) {
-    case 'alta':
+    case 'Alta':
       return 'rgba(255, 0, 0, 0.2)';  // Rojo para alta prioridad
-    case 'media':
+    case 'Media':
       return 'rgba(255, 165, 0, 0.2)'; // Naranja para prioridad media
-    case 'baja':
+    case 'Baja':
       return 'rgba(255, 255, 0, 0.2)'; // Amarillo para baja prioridad
     default:
       return 'inherit';  // Sin color de fondo si no hay prioridad definida
@@ -69,8 +69,8 @@ const TicketsList = () => {
               label="Tipo"
             >
               <MenuItem value="">Todos</MenuItem>
-              <MenuItem value="tecnico">Técnico</MenuItem>
-              <MenuItem value="funcional">Funcional</MenuItem>
+              <MenuItem value="Técnico">Técnico</MenuItem>
+              <MenuItem value="Funcional">Funcional</MenuItem>
             </Select>
           </FormControl>
         </Grid>
@@ -83,9 +83,9 @@ const TicketsList = () => {
               label="Prioridad"
             >
               <MenuItem value="">Todas</MenuItem>
-              <MenuItem value="alta">Alta</MenuItem>
-              <MenuItem value="media">Media</MenuItem>
-              <MenuItem value="baja">Baja</MenuItem>
+              <MenuItem value="Alta">Alta</MenuItem>
+              <MenuItem value="Media">Media</MenuItem>
+              <MenuItem value="Baja">Baja</MenuItem>
             </Select>
           </FormControl>
         </Grid>
@@ -98,8 +98,8 @@ const TicketsList = () => {
               label="Estado"
             >
               <MenuItem value="">Todos</MenuItem>
-              <MenuItem value="abierto">Abierto</MenuItem>
-              <MenuItem value="cerrado">Cerrado</MenuItem>
+              <MenuItem value="Abierto">Abierto</MenuItem>
+              <MenuItem value="Cerrado">Cerrado</MenuItem>
             </Select>
           </FormControl>
         </Grid>
@@ -116,7 +116,7 @@ const TicketsList = () => {
                 secondary={
                   <>
                     <Typography component="span" variant="body2" color="textPrimary">
-                      Tipo: {ticket.type} - Prioridad: {ticket.priority} - Estado: {ticket.status}
+                      Tipo: {ticket.type} | Prioridad: {ticket.priority} - Estado: {ticket.status}
                     </Typography>
                     <br />
                     <Typography component="span" variant="caption" color="textSecondary" style={{ fontStyle: 'italic' }}>
