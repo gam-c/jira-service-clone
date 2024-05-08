@@ -47,7 +47,7 @@ const EditTicketForm = ({ ticket, onClose }) => {
       </Grid>
       <Grid item xs={12}>
         <Button variant="contained" onClick={handleUpdateTicket}>
-          Update Ticket
+          Actualizar Ticket
         </Button>
       </Grid>
     </Grid>

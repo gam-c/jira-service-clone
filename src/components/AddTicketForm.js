@@ -35,7 +35,7 @@ const AddTicketForm = () => {
       <Grid item xs={12}>
         <TextField
           fullWidth
-          label="Ticket"
+          label="Asunto Ticket"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
