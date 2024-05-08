@@ -8,6 +8,19 @@ const formatDate = (dateString) => {
   return `${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getFullYear()} ${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
 };
 
+const getBackgroundColor = (priority) => {
+  switch (priority) {
+    case 'alta':
+      return 'rgba(255, 0, 0, 0.2)';  // Rojo para alta prioridad
+    case 'media':
+      return 'rgba(255, 165, 0, 0.2)'; // Naranja para prioridad media
+    case 'baja':
+      return 'rgba(255, 255, 0, 0.2)'; // Amarillo para baja prioridad
+    default:
+      return 'inherit';  // Sin color de fondo si no hay prioridad definida
+  }
+};
+
 const TicketsList = () => {
   const tickets = useSelector((state) => state.tickets.tickets);
   const [selectedTicket, setSelectedTicket] = useState(null);
@@ -49,7 +62,7 @@ const TicketsList = () => {
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
           <FormControl fullWidth variant="standard">
-            <InputLabel>Filtrar por Tipo</InputLabel>
+            <InputLabel>Tipo</InputLabel>
             <Select
               value={filterType}
               onChange={e => setFilterType(e.target.value)}
@@ -63,7 +76,7 @@ const TicketsList = () => {
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
           <FormControl fullWidth variant="standard">
-            <InputLabel>Filtrar por Prioridad</InputLabel>
+            <InputLabel>Prioridad</InputLabel>
             <Select
               value={filterPriority}
               onChange={e => setFilterPriority(e.target.value)}
@@ -78,7 +91,7 @@ const TicketsList = () => {
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
           <FormControl fullWidth variant="standard">
-            <InputLabel>Filtrar por Estado</InputLabel>
+            <InputLabel>Estado</InputLabel>
             <Select
               value={filterStatus}
               onChange={e => setFilterStatus(e.target.value)}
@@ -94,7 +107,10 @@ const TicketsList = () => {
       <List>
         {filteredTickets.map((ticket, index) => (
           <React.Fragment key={ticket.id}>
-            <ListItem alignItems="flex-start">
+            <ListItem 
+              alignItems="flex-start"
+              sx={{ backgroundColor: getBackgroundColor(ticket.priority) }}
+            >
               <ListItemText
                 primary={<Typography variant="subtitle1" component="span" style={{ fontWeight: 'bold' }}>{ticket.title}</Typography>}
                 secondary={
