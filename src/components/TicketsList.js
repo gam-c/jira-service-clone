@@ -116,7 +116,7 @@ const TicketsList = () => {
                 secondary={
                   <>
                     <Typography component="span" variant="body2" color="textPrimary">
-                      Tipo: {ticket.type} | Prioridad: {ticket.priority} - Estado: {ticket.status}
+                      Tipo: {ticket.type} | Prioridad: {ticket.priority} | Estado: {ticket.status}
                     </Typography>
                     <br />
                     <Typography component="span" variant="caption" color="textSecondary" style={{ fontStyle: 'italic' }}>
